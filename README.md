@@ -36,10 +36,10 @@ I have tested this on Linux only (Ubuntu). I would be glad if you try it out on 
 
 ## To do
 
-:white_medium_small_square: More file types
-:white_medium_small_square: Test usage on Windows and macOS
-:white_medium_small_square: Possibility to resize only a single image with a given full path to file
-:white_medium_small_square: Watermarking...
+:white_medium_small_square: More file types  
+:white_medium_small_square: Test usage on Windows and macOS  
+:white_medium_small_square: Possibility to resize only a single image with a given full path to file  
+:white_medium_small_square: Watermarking...  
 
 ## License
 
