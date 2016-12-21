@@ -6,7 +6,7 @@
 
 To install *rysize*, download the master and unzip it. Then do
 
-    cd rysise-master
+    cd rysize-master
     python setup.py install
 
 ## Usage
