@@ -30,7 +30,7 @@ To check out functionallity without installation, try (note you'll have to have 
 
 If the folder path isn't given, then *rysize* will prompt for it afterwards. No need to specify width *and* height simultaneously --- rysize maintains aspect ratio by default.
 
-*rysize* currently handles **jpg**, **png**, **bmp** and **gif** ~~**fit**~~ file types. I have not yet implemented handling of images with extensions more than 3 characters long.
+*rysize* currently handles **jpg**, **png**, **bmp** and **gif** file types. I have not yet implemented handling of images with extensions more than 3 characters long.
 
 I have tested this on Linux only (Ubuntu). I would be glad if you try it out on different operating systems and tell me if it behaves properly. Feel free to open issues, etc.
 
