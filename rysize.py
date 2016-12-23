@@ -3,7 +3,7 @@ import PIL
 from PIL import Image
 import click
 
-imgExts = ["png", "jpg", "bmp", "fit", "gif"]
+imgExts = ["jpg", "png", "bmp", "gif"]
 
 @click.command()
 @click.option("-p", "--path", prompt="Directory", help="Full path to containing directory.")
@@ -14,7 +14,9 @@ imgExts = ["png", "jpg", "bmp", "fit", "gif"]
 
 def rysize(path, width, height, ratio):
     
-    """Command-line interface application for bulk resizing of images in a given directory. Build with Python."""
+    """Command-line interface application for bulk resizing of images in a given directory. Build with Python.
+    
+    More info: https://github.com/nechoventsi/rysize"""
     
     with click.progressbar(os.listdir(path), label="Resizing...") as bar:
         for fname in bar:
