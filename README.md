@@ -16,6 +16,7 @@ I recommend installing *rysize* in a virtual environment, because I have not yet
 So download or clone the repo, start a new virtaulenv in its directory and install using setuptools:
 
     virtualenv -p python3 testenv
+    . testenv/bin/activate
     python3 setup.py install
 
 ### Usage
