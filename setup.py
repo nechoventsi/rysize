@@ -1,12 +1,17 @@
 from setuptools import setup
 
 setup(
-    name="rysize",
-    version="0.1",
-    py_modules=["rysize"],
-    install_requires=[
-        "Click", "Pillow"],
-    entry_points='''
+    name = "rysize",
+    version = "0.2",
+    description = "CLI application for bulk resizing of images",
+    url = "https://github.com/nechoventsi/rysize",
+    author = "Ventsislav Dimitrov",
+    license = "MIT",
+    py_modules = ["rysize"],
+    install_requires = [
+        "Click>=6.6",
+        "Pillow>=3.3.1"],
+    entry_points = '''
         [console_scripts]
         rysize=rysize:rysize
     ''',
