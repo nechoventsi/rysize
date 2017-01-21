@@ -17,7 +17,7 @@ So download or clone the repo, start a new virtaulenv in its directory and insta
 
     virtualenv -p python3 testenv
     . testenv/bin/activate
-    python3 setup.py install
+    pip3 install .
 
 ### Usage
 
@@ -34,22 +34,22 @@ An example resizing by width goes like this:
 
     rysize --width 800 /home/user/containing-folder
 
-To check out functionallity without installation, try (note you'll have to have *Click* and *Pillow* installed):
+To check out functionallity without installation, try the following (note you'll have to have *Click* and *Pillow* installed):
 
-    python rysize.py --width 800 /home/user/containing-folder
+    python3 rysize.py --width 800 /home/user/containing-folder
 
-If the folder path isn't given, then *rysize* will prompt for it afterwards. No need to specify width *and* height simultaneously --- rysize maintains aspect ratio by default.
+If the folder path isn't given, then *rysize* will prompt for it afterwards. No need to specify width *and* height simultaneously &mdash; rysize maintains aspect ratio by default.
 
-*rysize* currently handles **jpg**, **png**, **bmp** and **gif** file types. I have not yet implemented handling of images with extensions more than 3 characters long.
+*rysize* currently handles **jpg**, **jpeg**, **png**, **bmp** and **gif** file types.
 
-I have tested this on Linux only (Ubuntu). I would be glad if you try it out on different operating systems and tell me if it behaves properly. Feel free to open issues, etc.
+I have tested this on Ubuntu Linux only. I would be glad if you try it out on different operating systems and tell me if it behaves properly. Feel free to open issues, etc.
 
 ### To do
 
-:white_medium_small_square: More file types  
+:ballot_box_with_check: Proper handling of file types  
 :white_medium_small_square: Test usage on Windows and macOS  
 :white_medium_small_square: Possibility to resize only a single image with a given full path to file  
-:white_medium_small_square: Watermarking...  
+:white_medium_small_square: Watermarking?  
 
 ### License
 
