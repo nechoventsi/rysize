@@ -3,7 +3,7 @@ import PIL
 from PIL import Image
 import click
 
-imgExts = ["jpg", "png", "bmp", "gif"]
+imgExts = [".jpg", ".jpeg", ".png", ".bmp", ".gif"]
 
 @click.command()
 @click.option("-p", "--path", prompt="Directory", help="Full path to containing directory.")
@@ -21,8 +21,8 @@ def rysize(path, width, height, ratio):
     with click.progressbar(os.listdir(path), label="Resizing...") as bar:
         for fname in bar:
 
-            ext = fname[-3:].lower()
-            if ext not in imgExts:
+            fnameParts = os.path.splitext(fname)
+            if fnameParts[1].lower() not in imgExts:
                 continue
 
             filePath = os.path.join(path, fname)
@@ -45,7 +45,9 @@ def rysize(path, width, height, ratio):
 
             imgNew = img.resize((width, height), PIL.Image.ANTIALIAS)
 
-            imgNew.save(filePath[:-4]+"_resized"+filePath[-4:])
+            pathParts = os.path.splitext(filePath)
+
+            imgNew.save(pathParts[0] + "_resized" + pathParts[1])
 
     click.echo("Done!")
 
