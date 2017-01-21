@@ -18,6 +18,9 @@ def rysize(path, width, height, ratio):
     
     More info: https://github.com/nechoventsi/rysize"""
     
+    if path == ".":
+        path = os.getcwd()
+
     with click.progressbar(os.listdir(path), label="Resizing...") as bar:
         for fname in bar:
 
