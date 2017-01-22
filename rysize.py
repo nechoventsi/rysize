@@ -18,14 +18,14 @@ def rysize(path, width, height, ratio):
     
     More info: https://github.com/nechoventsi/rysize"""
     
-    if os.path.isdir(path) == True:
+    if os.path.isdir(path):
         files = os.listdir(path)
 
     elif path == ".":
         files = os.listdir(os.getcwd())
         path = os.getcwd()
 
-    elif os.path.isfile(path) == True:
+    elif os.path.isfile(path):
         files = [os.path.basename(path)]
         path = os.path.dirname(path)
 
