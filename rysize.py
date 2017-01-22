@@ -6,9 +6,9 @@ import click
 imgExts = [".jpg", ".jpeg", ".png", ".bmp", ".gif"]
 
 @click.command()
-@click.option("-p", "--path", prompt="Directory", help="Full path to containing directory.")
-@click.option("-w", "--width", type=int, help="New width of file.")
-@click.option("-h", "--height", type=int, help="New height of file.")
+@click.option("-p", "--path", prompt="Directory", help="Full path to containing directory or file. Use '.' for current working directory.")
+@click.option("-w", "--width", type=int, help="New width.")
+@click.option("-h", "--height", type=int, help="New height.")
 @click.option("-r", "--ratio", default=1.0, help="Percentage of original size.")
 @click.version_option()
 

@@ -23,9 +23,9 @@ So download or clone the repo, start a new virtaulenv in its directory and insta
 
 In a terminal window simply do `rysize --help` to see the help page for the app. Options are:
 
-    -p, --path TEXT       Full path to containing directory.
-    -w, --width INTEGER   New width of file.
-    -h, --height INTEGER  New height of file.
+    -p, --path TEXT       Full path to containing directory or file. Use '.' for current working directory.
+    -w, --width INTEGER   New width.
+    -h, --height INTEGER  New height.
     -r, --ratio FLOAT     Percentage of original size.
     --version             Show the version and exit.
     --help                Show this message and exit.
@@ -38,7 +38,7 @@ To check out functionallity without installation, try the following (note you'll
 
     python3 rysize.py --width 800 /home/user/containing-folder
 
-If the folder path isn't given, then *rysize* will prompt for it afterwards. No need to specify width *and* height simultaneously &mdash; rysize maintains aspect ratio by default.
+If the path isn't given, then *rysize* will prompt for it afterwards. No need to specify width *and* height simultaneously &mdash; rysize maintains aspect ratio by default.
 
 *rysize* currently handles **jpg**, **jpeg**, **png**, **bmp** and **gif** file types.
 
