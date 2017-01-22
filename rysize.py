@@ -18,10 +18,18 @@ def rysize(path, width, height, ratio):
     
     More info: https://github.com/nechoventsi/rysize"""
     
-    if path == ".":
+    if os.path.isdir(path) == True:
+        files = os.listdir(path)
+
+    elif path == ".":
+        files = os.listdir(os.getcwd())
         path = os.getcwd()
 
-    with click.progressbar(os.listdir(path), label="Resizing...") as bar:
+    elif os.path.isfile(path) == True:
+        files = [os.path.basename(path)]
+        path = os.path.dirname(path)
+
+    with click.progressbar(files, label="Resizing...") as bar:
         for fname in bar:
 
             fnameParts = os.path.splitext(fname)
