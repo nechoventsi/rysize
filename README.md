@@ -47,8 +47,8 @@ I have tested this on Ubuntu Linux only. I would be glad if you try it out on di
 ### To do
 
 :ballot_box_with_check: Proper handling of file types  
+:ballot_box_with_check: Possibility to resize only a single image with a given full path to file  
 :white_medium_small_square: Test usage on Windows and macOS  
-:white_medium_small_square: Possibility to resize only a single image with a given full path to file  
 :white_medium_small_square: Watermarking?  
 
 ### License
