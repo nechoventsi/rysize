@@ -3,7 +3,7 @@ import PIL
 from PIL import Image
 import click
 
-image_extensions = [".jpg", ".jpeg", ".png", ".bmp", ".gif"]
+supported_image_extensions = [".jpg", ".jpeg", ".png", ".bmp", ".gif"]
 
 @click.command()
 @click.option("-p", "--path", prompt="Directory", help="Full path to containing directory or file. Use '.' for current working directory. Does not recursively go through lower level directories.")
@@ -27,10 +27,10 @@ def rysize(path, width, height, ratio):
         files = [os.path.basename(path)]
         path = os.path.dirname(path)
 
-    with click.progressbar(files, label="Resizing...") as bar:
-        for file_name in bar:
-            file_name_parts = os.path.splitext(file_name)
-            if file_name_parts[1].lower() not in image_extensions:
+    with click.progressbar(files, label="Resizing...") as progress_bar:
+        for file_name in progress_bar:
+            extension = os.path.splitext(file_name)[1].lower()
+            if extension not in supported_image_extensions:
                 continue
 
             path_to_file = os.path.join(path, file_name)
