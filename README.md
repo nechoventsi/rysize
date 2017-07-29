@@ -23,9 +23,9 @@ So download or clone the repo, start a new `virtaulenv` in its directory and ins
 
 In a terminal window simply do `rysize --help` to see the help page. Options are:
 
-    -p, --path TEXT       Full path to containing directory or file. Use '.' for current working directory.
-    -w, --width INTEGER   New width.
-    -h, --height INTEGER  New height.
+    -p, --path TEXT       Full path to containing directory or file. Use '.' for current working directory. Does not recursively go through lower level directories.
+    -w, --width INTEGER   New width of file(s) in pixels.
+    -h, --height INTEGER  New height of file(s) in pixels.
     -r, --ratio FLOAT     Percentage of original size.
     --version             Show the version and exit.
     --help                Show this message and exit.
