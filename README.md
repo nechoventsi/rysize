@@ -1,6 +1,6 @@
 # rysize
 
-*rysize* is a command-line interface application for bulk resizing of images. Build with Python, using [Click](http://click.pocoo.org/) and [Pillow](http://python-pillow.org/) (The friendly PIL fork).
+*rysize* is a command-line interface application for bulk resizing of images. Build with Python, using [Click](http://click.pocoo.org/) and [Pillow](http://python-pillow.org/) (The friendly PIL fork). If you are in need of a quick resizing of many images at once, and don't want to fire up Photoshop, this is the tool for you.
 
 ## Contents
 
@@ -11,9 +11,9 @@
 
 ### Installation
 
-I recommend installing *rysize* in a virtual environment, because I have not yet fully tested proper installation and automatic dependencies handling. The script is compatible with Python 2.7 *and* Python 3.5.
+I recommend installing *rysize* in a virtual environment, because I have not yet fully tested proper installation and automatic dependencies handling. The script is compatible with Python >=2.7 *and* Python >=3.5.
 
-So download or clone the repo, start a new virtaulenv in its directory and install using setuptools:
+So download or clone the repo, start a new `virtaulenv` in its directory and install using `pip`:
 
     virtualenv -p python3 testenv
     . testenv/bin/activate
@@ -21,7 +21,7 @@ So download or clone the repo, start a new virtaulenv in its directory and insta
 
 ### Usage
 
-In a terminal window simply do `rysize --help` to see the help page for the app. Options are:
+In a terminal window simply do `rysize --help` to see the help page. Options are:
 
     -p, --path TEXT       Full path to containing directory or file. Use '.' for current working directory.
     -w, --width INTEGER   New width.
@@ -32,23 +32,25 @@ In a terminal window simply do `rysize --help` to see the help page for the app.
 
 An example resizing by width goes like this:
 
-    rysize --width 800 /home/user/containing-folder
+    rysize --width 800 --path /home/user/containing-folder
 
 To check out functionallity without installation, try the following (note you'll have to have *Click* and *Pillow* installed):
 
-    python3 rysize.py --width 800 /home/user/containing-folder
+    python3 rysize.py --width 800 --path /home/user/containing-folder
 
-If the path isn't given, then *rysize* will prompt for it afterwards. No need to specify width *and* height simultaneously &mdash; rysize maintains aspect ratio by default.
+- If the path isn't given, then *rysize* will prompt for it afterwards.  
+- No need to specify width *and* height simultaneously --- *rysize* maintains aspect ratio by default.  
 
 *rysize* currently handles **jpg**, **jpeg**, **png**, **bmp** and **gif** file types.
 
-I have tested this on Ubuntu Linux only. I would be glad if you try it out on different operating systems and tell me if it behaves properly. Feel free to open issues, etc.
+I have tested this on Linux only. I would be glad if you try it out on different operating systems and tell me if it behaves properly. Feel free to open issues, etc.
 
 ### To do
 
 :ballot_box_with_check: Proper handling of file types  
 :ballot_box_with_check: Possibility to resize only a single image with a given full path to file  
-:white_medium_small_square: Test usage on Windows and macOS  
+:ballot_box_with_check: Test usage on macOS  
+:white_medium_small_square: Test usage on Windows  
 :white_medium_small_square: Watermarking?  
 
 ### License
