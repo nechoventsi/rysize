@@ -34,12 +34,12 @@ An example resizing by width goes like this:
 
     rysize --width 800 --path /home/user/containing-folder
 
+- If the path isn't given, then *rysize* will prompt for it afterwards.  
+- No need to specify width *and* height simultaneously --- *rysize* maintains aspect ratio by default.  
+
 To check out functionallity without installation, try the following (note you'll have to have *Click* and *Pillow* installed):
 
     python3 rysize.py --width 800 --path /home/user/containing-folder
-
-- If the path isn't given, then *rysize* will prompt for it afterwards.  
-- No need to specify width *and* height simultaneously --- *rysize* maintains aspect ratio by default.  
 
 *rysize* currently handles **jpg**, **jpeg**, **png**, **bmp** and **gif** file types.
 
