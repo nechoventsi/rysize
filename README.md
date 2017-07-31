@@ -13,7 +13,7 @@
 
 I recommend installing *rysize* in a virtual environment, because I have not yet fully tested proper installation and automatic dependencies handling. The script is compatible with Python >=2.7 *and* Python >=3.5.
 
-So download or clone the repo, start a new `virtaulenv` in its directory and install using `pip`:
+So download or clone the repo, start a new `virtualenv` in its directory and install using `pip`:
 
     virtualenv -p python3 testenv
     . testenv/bin/activate
