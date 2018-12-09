@@ -18,10 +18,10 @@ height_help = """New height of file(s). In pixels, defined by integer values. Ma
 ratio_help = """Percentage of original size for the file(s). Use this if you want to scale pictures by a factor, given in floating-point numbers. Example: '--ratio 0.5' decreases the image size by 50%."""
 
 @click.command()
-@click.option("-p", "--path", prompt="Directory", help="Full path to containing directory or file. Use '.' for current working directory. Does not recursively go through lower level directories.")
-@click.option("-w", "--width", type=int, help="New width of file(s) in pixels.")
-@click.option("-h", "--height", type=int, help="New height of file(s) in pixels.")
-@click.option("-r", "--ratio", default=1.0, help="Percentage of original size.")
+@click.option("-p", "--path", prompt="Directory", help=path_help)
+@click.option("-w", "--width", type=int, help=width_help)
+@click.option("-h", "--height", type=int, help=height_help)
+@click.option("-r", "--ratio", default=1.0, help=ratio_help)
 @click.version_option()
 
 def rysize(path, width, height, ratio):
