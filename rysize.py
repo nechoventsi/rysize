@@ -5,6 +5,18 @@ import click
 
 supported_image_extensions = [".jpg", ".jpeg", ".png", ".bmp", ".gif"]
 
+path_help = """Full path to containing directory or file. The script does not recursively go through lower level directories, so it will handle only the images in the given directory.
+
+Example: '--path /home/user/containing-folder'
+
+Use '--path .' for current working directory. Can also resize only a single file by pointing to its destination, e.g. '--path /home/user/folder/example.jpg'."""
+
+width_help = """New width of file(s). In pixels, defined by integer values. Maintains aspect ratio. Example: '--width 800'"""
+
+height_help = """New height of file(s). In pixels, defined by integer values. Maintains aspect ratio. Example: '--height 800'"""
+
+ratio_help = """Percentage of original size for the file(s). Use this if you want to scale pictures by a factor, given in floating-point numbers. Example: '--ratio 0.5' decreases the image size by 50%."""
+
 @click.command()
 @click.option("-p", "--path", prompt="Directory", help="Full path to containing directory or file. Use '.' for current working directory. Does not recursively go through lower level directories.")
 @click.option("-w", "--width", type=int, help="New width of file(s) in pixels.")
@@ -52,5 +64,5 @@ def rysize(path, width, height, ratio):
 
     click.echo("Done!")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     rysize()
