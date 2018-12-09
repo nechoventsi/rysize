@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = "rysize",
-    version = "0.4.2",
+    version = "0.5.0",
     description = "CLI application for bulk image resizing",
     long_description = open("README.md").read(),
     url = "https://github.com/nechoventsi/rysize",
