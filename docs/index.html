@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>    
+        <meta charset="utf-8">
+        <!-- MOBILE VIEWPORT -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/main.css">
+        <!-- FONTS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Ubuntu+Mono|Roboto">
+
+        <title>rysize &mdash; CLI application for bulk image resizing</title>    
+    </head>
+  
+    <body>
+        <!-- HEADER START -->
+        <header class="container">
+            <img id="logo" src="assets/logo.png" alt="rysize" title="CLI application for bulk image resizing">
+
+            <p class="clearing" id="tagline">CLI application for bulk image resizing</p>
+        </header>
+        <!-- HEADER END -->
+
+        <!-- NAVIGATION START -->
+        <!-- <section class="container navi">
+            <ul>
+                <li><a href="https://github.com/nechoventsi/rysize" target="_blank">View on GitHub</a></li>
+                <li><a href="#">View on PyPI</a></li>
+                <li><a href="#">View Changelog</a></li>
+            </ul>
+        </section> -->
+        <!-- NAVIGATION END -->
+
+        <!-- BUTTONS START -->
+        <!-- <section class="buttons container clearing">
+            <a id="btn" href="https://github.com/nechoventsi/rysize" target="_blank">View on GitHub</a>
+        </section> -->
+        <!-- BUTTONS END -->
+
+        <section id="content">
+
+            <!-- CONTENT OF THE PAGE -->
+            <div class="container col">
+
+<h2 id="contents">Contents</h2>
+
+<p><em>rysize</em> is a command-line interface application for bulk resizing of images. Build with Python, using <a href="http://click.pocoo.org/" target="_blank">Click</a> and <a href="http://python-pillow.org/" target="_blank">Pillow</a> (The friendly PIL fork).</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>I recommend installing <em>rysize</em> in a virtual environment, because I have not yet fully tested proper installation and automatic dependencies handling. The script is compatible with Python 3.</p>
+
+<p>So download or clone the repo, start a new <code>virtaulenv</code> in its directory and install using <code>pip</code>:</p>
+
+<pre><code>virtualenv -p python3 testenv
+. testenv/bin/activate
+pip install .</code></pre>
+
+<h3 id="usage">Usage</h3>
+
+<p>Avilable options are:</p>
+
+<pre><code>-p, --path TEXT       Full path to containing directory or file.
+-w, --width INTEGER   New width of file(s) in pixels.
+-h, --height INTEGER  New height of file(s) in pixels.
+-r, --ratio FLOAT     Percentage of original size.
+--version             Show the version and exit.
+--help                Show this message and exit.</code></pre>
+
+<p>Simply type <code>rysize --help</code> in a terminal window for the full help message.</p>
+
+<p>An example resizing by width goes like this:</p>
+
+<pre><code>rysize --width 800 --path /home/user/containing-folder</code></pre>
+
+<ul>
+    <li>If the path isn't given, then <em>rysize</em> will prompt for it afterwards;</li>
+    <li>No need to specify width and height simultaneously &mdash; <em>rysize</em> maintains aspect ratio by default.</li>
+</ul>
+
+<p>To check out functionallity without installation, try the following (note you'll have to have <em>Click</em> and <em>Pillow</em> installed):</p>
+
+<pre><code>python3 rysize.py --width 800 --path /home/user/containing-folder</code></pre>
+
+<p><em>rysize</em> currently handles <strong>jpg</strong>, <strong>jpeg</strong>, <strong>png</strong>, <strong>bmp</strong> and <strong>gif</strong> file types.</p>
+
+<p>I have tested this on Linux only. I would be glad if you try it out on different operating systems and tell me if it behaves properly. Feel free to open issues, etc.</p>
+
+<h3 id="mit-license">MIT License</h3>
+
+<p>Copyright (c) 2016 Ventsislav Dimitrov</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        
+            </div>
+            <!-- CONTENT END -->
+            
+        </section>
+
+        <!-- FOOTER START -->
+        <footer class="primary-footer container group">
+            Copyright &copy; 2016&ndash;2018 Ventsislav V. Dimitrov
+        </footer>
+        <!-- FOOTER END -->
+
+    </body>
+
+<!-- Design by Ventsislav V. Dimitrov (https://github.com/nechoventsi) -->
+
+<!-- GITHUB RIBBON START-->
+<a href="https://github.com/nechoventsi/rysize" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+<!-- GITHUB RIBBON END -->
+
+</html>
