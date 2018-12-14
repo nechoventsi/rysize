@@ -52,8 +52,8 @@ I have tested this on Linux only. I would be glad if you try it out on different
 :ballot_box_with_check: Proper handling of file types  
 :ballot_box_with_check: Possibility to resize only a single image with a given full path to file  
 :ballot_box_with_check: Test usage on macOS  
-:white_medium_small_square: Test usage on Windows  
-:white_medium_small_square: Watermarking?  
+:black_square_button: Test usage on Windows  
+:black_square_button: Watermarking?  
 
 ### License
 
