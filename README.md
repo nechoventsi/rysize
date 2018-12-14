@@ -1,6 +1,6 @@
 # rysize
 
-*rysize* is a command-line interface application for bulk resizing of images. Build with Python, using [Click](http://click.pocoo.org/) and [Pillow](http://python-pillow.org/) (The friendly PIL fork). If you are in need of a quick resizing of many images at once, and don't want to fire up Photoshop, this is the tool for you.
+*rysize* is a command-line interface application for bulk resizing of images. Build with Python, using [Click](http://click.pocoo.org/) and [Pillow](http://python-pillow.org/) (The friendly PIL fork).
 
 ## Contents
 
@@ -11,24 +11,26 @@
 
 ### Installation
 
-I recommend installing *rysize* in a virtual environment, because I have not yet fully tested proper installation and automatic dependencies handling. The script is compatible with Python >=2.7 *and* Python >=3.5.
+I recommend installing *rysize* in a virtual environment, because I have not yet fully tested proper installation and automatic dependencies handling. The script is compatible with Python 3.
 
 So download or clone the repo, start a new `virtualenv` in its directory and install using `pip`:
 
     virtualenv -p python3 testenv
     . testenv/bin/activate
-    pip3 install .
+    pip install .
 
 ### Usage
 
-In a terminal window simply do `rysize --help` to see the help page. Options are:
+Avilable options are:
 
-    -p, --path TEXT       Full path to containing directory or file. Use '.' for current working directory. Does not recursively go through lower level directories.
+    -p, --path TEXT       Full path to containing directory or file.
     -w, --width INTEGER   New width of file(s) in pixels.
     -h, --height INTEGER  New height of file(s) in pixels.
     -r, --ratio FLOAT     Percentage of original size.
     --version             Show the version and exit.
     --help                Show this message and exit.
+
+Simply type `rysize --help` in a terminal window for the full help message.
 
 An example resizing by width goes like this:
 
